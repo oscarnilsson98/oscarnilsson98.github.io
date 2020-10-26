@@ -1,0 +1,342 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>FUB</title>
+    <meta name="description" content="">
+    <meta name="author" content="Oscar">
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="navbar navbar-custom">
+        <section class="navbar-section">
+            <a href="index.html">
+                <img src="img/FUBs logotyp.jpg" class="img-responsive img-fit-contain" style="width: 20%; height: auto;" />
+            </a>
+        </section>
+        <section class="navbar-section">
+
+        </section>
+    </header>
+
+    <div id="form" class="container">
+        <h1>Registrerings Formulär</h1>
+
+        <div class="columns">
+
+            <div class="column col-xs-1 col-4 mt-2 mb-2">
+                <button class="btn btn-primary btn-lg btn-center" onclick="previous()">Previous</button>
+            </div>
+
+            <form class="column col-xs-8 col-4 mt-2 mb-2">
+
+                <div id="div1" class="columns inputdiv">
+                    <div class="form-group column col-12 p-centered">
+                        <h4>Personnuppgifter</h4>
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Personnummer</label>
+                        <input class="form-input" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Förnamn</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Efternamn</label>
+                        <input class="form-input" type="text" />
+                    </div>
+                </div>
+
+                <div id="div2" class="columns inputdiv">
+                    <div class="form-group column col-12 p-centered">
+                        <h4>Adress</h4>
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Adress</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">C/o</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Postnummer</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Ort</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Land</label>
+                        <input class="form-input" type="text" />
+                    </div>
+                </div>
+
+                <div id="div3" class="columns inputdiv">
+                    <div class="form-group column col-12 p-centered">
+                        <h4>Kontaktuppgifter</h4>
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">E-post</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Telefon</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Mobil</label>
+                        <input class="form-input" type="text" />
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Lokal förening</label>
+                        <select class="form-select">
+                            <option>Malmö</option>
+                            <option>Stockholm</option>
+                            <option>Göteborg</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-label">Värvad av medlem (uppge värvarens medlemsnummer)</label>
+                        <input class="form-input" type="text" />
+                    </div>
+                </div>
+
+                <div id="div4" class="columns inputdiv">
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-checkbox labelh4size"><input id="otherpaycheckbox" type="checkbox"
+                                onclick="showOtherPay()" /><i class="form-icon"></i>Annan som betalar</label>
+                        <div id="diffpay" class="">
+                            <div class="form-group">
+                                <label class="form-label">Förnamn</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Efternamn</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">C/o adress</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Adress</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Postnummer</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Ort</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Land</label>
+                                <input class="form-input" type="text" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="div5" class="columns inputdiv">
+                    <div class="form-group column col-12 p-centered">
+
+                        <div class="d-inline-flex">
+                            <h4>Registrera Familjemedlem</h4>
+                            <button class="iconbutton" onclick="addMember(event)"><i
+                                    class="icon icon-plus"></i></button>
+                        </div>
+
+                        <div id="add1" onclick="deleteMember(event)">
+                            <button class="iconbutton float-right"><i class="icon icon-minus"></i></button>
+                            <div class="form-group">
+                                <label class="form-label">Förnamn</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Efternamn</label>
+                                <input class="form-input" type="text" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Personnummer</label>
+                                <input class="form-input" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Lokal förening</label>
+                                <select class="form-select">
+                                    <option>Malmö</option>
+                                    <option>Stockholm</option>
+                                    <option>Göteborg</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="div6" class="columns inputdiv">
+                    <div class="form-group column col-12 p-centered">
+                        <h4 class="form-label">Betalningsmethod</h4>
+
+                        <label class="form-radio">
+                            <input type="radio" checked>
+                            <i class="form-icon"></i> Kortbetalning
+                        </label>
+                        <label class="form-radio">
+                            <input type="radio">
+                            <i class="form-icon"></i> Faktura
+                        </label>
+                        <label class="form-radio">
+                            <input type="radio">
+                            <i class="form-icon"></i> Autogiro
+                        </label>
+                    </div>
+
+                    <div class="form-group column col-12 p-centered">
+                        <label class="form-checkbox"><input id="otherpaycheckbox" type="checkbox" />
+                            <i class="form-icon"></i>
+                            Jag godkänner att mina personuppgifter sparas enligt
+                            <a href="https://www.fub.se/om-fub/hur-jobbar-vi-pa-fub-med-personuppgifter/"
+                                target="_blank">Riksförbundet FUB:s personuppgiftspolicy.</a>
+                        </label>
+                    </div>
+
+                    <div class="column col-12 p-centered">
+                        <button class="btn btn-primary btn-lg float-right mt-2" onclick="pay(event)">Betala</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <div class="column col-xs-1 col-4">
+                <button class="btn btn-primary btn-lg btn-center" onclick="next()">Next</button>
+            </div>
+
+            <div class="column col-4 col-mx-auto text-center mt-2">
+                <span id="dot1" class="dot" onclick="setView(1)"></span>
+                <span id="dot2" class="dot" onclick="setView(2)"></span>
+                <span id="dot3" class="dot" onclick="setView(3)"></span>
+                <span id="dot4" class="dot" onclick="setView(4)"></span>
+                <span id="dot5" class="dot" onclick="setView(5)"></span>
+                <span id="dot6" class="dot" onclick="setView(6)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="finished" class="text-center">
+        <h1 class="mx-2">Tack! Ditt medlemsskap gör skillnad</h1>
+    </div>
+
+    <script>
+        document.getElementById("diffpay").style.display = 'none';
+        document.getElementById("otherpaycheckbox").checked = false;
+
+        let i = 1;
+        for (d = 1; d < 7; d++) {
+            document.getElementById("div" + d).style.display = 'none';
+            document.getElementById("dot" + d).style.backgroundColor = '#bbb';
+        }
+        document.getElementById("dot" + i).style.backgroundColor = '#5755d9';
+        document.getElementById("div" + i).style.display = 'block';
+
+        function next() {
+            if (i !== 6) {
+                document.getElementById("div" + i).style.display = 'none';
+                document.getElementById("dot" + i).style.backgroundColor = '#bbb';
+                i++;
+                document.getElementById("div" + i).style.display = 'block';
+                document.getElementById("dot" + i).style.backgroundColor = '#5755d9';
+            }
+        }
+
+        function previous() {
+            if (i !== 1) {
+                document.getElementById("div" + i).style.display = 'none';
+                document.getElementById("dot" + i).style.backgroundColor = '#bbb';
+                i--;
+                document.getElementById("div" + i).style.display = 'block';
+                document.getElementById("dot" + i).style.backgroundColor = '#5755d9';
+            }
+        }
+
+        function setView(index) {
+            for (d = 1; d < 7; d++) {
+                document.getElementById("div" + d).style.display = 'none';
+                document.getElementById("dot" + d).style.backgroundColor = '#bbb';
+            }
+
+            i = index;
+            document.getElementById("div" + i).style.display = 'block';
+            document.getElementById("dot" + i).style.backgroundColor = '#5755d9';
+        }
+
+        function showOtherPay() {
+            element = document.getElementById("otherpaycheckbox");
+            if (element.checked) {
+                document.getElementById("diffpay").style.display = 'block';
+            } else {
+                document.getElementById("diffpay").style.display = 'none';
+            }
+        }
+
+        document.getElementById("add1").style.display = 'none';
+        function addMember(event) {
+            event.preventDefault();
+            document.getElementById("add1").style.display = 'block';
+        }
+
+        function deleteMember(event) {
+            event.preventDefault();
+            document.getElementById("add1").style.display = 'none';
+        }
+
+        document.getElementById("finished").style.display = 'none';
+        function pay(event) {
+            event.preventDefault();
+
+            document.getElementById("div" + i).style.display = 'none';
+            document.getElementById("dot" + i).style.backgroundColor = '#bbb';
+            i = 1;
+            document.getElementById("div" + i).style.display = 'block';
+            document.getElementById("dot" + i).style.backgroundColor = '#5755d9';
+
+            document.getElementById("form").style.display = 'none';
+            document.getElementById("finished").style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
